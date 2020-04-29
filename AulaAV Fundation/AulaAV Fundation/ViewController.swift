@@ -12,9 +12,11 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var VolumeSlider: UISlider!
     
-    @IBOutlet weak var PlayButton: UIButton!
+    @IBAction func PlayButton(_ sender: Any) {
+    }
     
-    @IBOutlet weak var StopButton: UIButton!
+    @IBAction func PauseButton(_ sender: Any) {
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -18,6 +18,9 @@
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qvf-Bf-m3u">
                                 <rect key="frame" x="80" y="770" width="15" height="22"/>
                                 <state key="normal" title="Button" image="play.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="PlayButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="neT-Qw-N3g"/>
+                                </connections>
                             </button>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="so3-gE-l0y">
                                 <rect key="frame" x="18" y="674" width="378" height="31"/>
@@ -25,6 +28,9 @@
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U1a-q9-5Cb">
                                 <rect key="frame" x="320" y="770" width="14" height="22"/>
                                 <state key="normal" title="Button" image="pause.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="PauseButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Anj-S1-OOf"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -42,8 +48,6 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="PlayButton" destination="Qvf-Bf-m3u" id="exF-KV-jNR"/>
-                        <outlet property="StopButton" destination="U1a-q9-5Cb" id="Cjv-gX-4bg"/>
                         <outlet property="VolumeSlider" destination="so3-gE-l0y" id="qd5-qh-aVY"/>
                     </connections>
                 </viewController>
