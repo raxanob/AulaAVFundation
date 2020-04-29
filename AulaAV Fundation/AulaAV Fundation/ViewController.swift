@@ -17,6 +17,16 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
     
     @IBAction func VolumeSliderAction(_ sender: Any) {
         audioPlayer?.volume = VolumeSlider.value
+        if let bundlePath = Bundle.main.path(forResource: "bankrobber", ofType: "mp3"){
+            let url = URL.init(fileURLWithPath: bundlePath)
+            do {
+                try audioPlayer = AVAudioPlayer(contentsOf: url)
+                audioPlayer?.delegate = self
+                audioPlayer?.prepareToPlay()
+            } catch let error as NSError {
+                print("Erro: \(error.localizedDescription)")
+            }
+        }
     }
     
     @IBAction func PlayButton(_ sender: Any) {
