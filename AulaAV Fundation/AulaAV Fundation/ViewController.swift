@@ -7,15 +7,24 @@
 //
 
 import UIKit
+import AVFoundation
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, AVAudioPlayerDelegate {
 
+    var audioPlayer: AVAudioPlayer?
+    
     @IBOutlet weak var VolumeSlider: UISlider!
     
+    @IBAction func VolumeSliderAction(_ sender: Any) {
+        audioPlayer?.volume = VolumeSlider.value
+    }
+    
     @IBAction func PlayButton(_ sender: Any) {
+        audioPlayer?.play()
     }
     
     @IBAction func PauseButton(_ sender: Any) {
+        audioPlayer?.stop()
     }
     
     override func viewDidLoad() {
